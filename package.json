@@ -5,7 +5,7 @@
   "type": "module",
   "main": "dist/myvme-rich-text-editor.umd.js",
   "module": "dist/myvme-rich-text-editor.es.js",
-  "types": "dist/main.d.ts",
+  "types": "dist/components/MyVMERichTextEditor.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

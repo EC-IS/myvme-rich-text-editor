@@ -1,8 +1,11 @@
 {
   "name": "myvme-rich-text-editor",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "main": "dist/myvme-rich-text-editor.umd.js",
+  "module": "dist/myvme-rich-text-editor.es.js",
+  "types": "dist/main.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -11,7 +14,8 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "vite-plugin-dts": "^3.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
@@ -24,5 +28,8 @@
     "eslint-plugin-react-refresh": "^0.4.6",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
+  },
+  "author": {
+    "name": "Thomas Spleesters"
   }
 }

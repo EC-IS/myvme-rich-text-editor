@@ -1,16 +1,20 @@
-import { useEffect, useRef, useState } from "react";
+import {useRef } from "react";
 
-const Editor = () => {
-    const [content, setContent] = useState('');
-    const editorRef = useRef(null);
+const MyVMERichTextEditor = () => {
+    //const [content, setContent] = useState('');
+    const editorRef = useRef<HTMLDivElement>(null);
 
     const handleInput = () => {
-        console.log("Input detected:", editorRef.current.innerHTML); // Log the current HTML content
+        console.log("Input detected:", editorRef.current?.innerHTML); // Log the current HTML content
     };
 
-    const handleCommand = (command, value = null) => {
-        console.log(`Executing command: ${command}`, value); // Log the command and value being executed
-        document.execCommand(command, false, value);
+    const handleCommand = (command: string, value?: string | null) => {
+
+        console.log(`Executing command: ${command}`, value);
+        if (!editorRef.current) return; // Check if editorRef.current is not null
+
+        // Adjust value to be undefined instead of null for compatibility
+        document.execCommand(command, false, value === null ? undefined : value);
         editorRef.current.focus();
     };
 
@@ -76,4 +80,4 @@ const Editor = () => {
     );
 };
 
-export default Editor;
+export default MyVMERichTextEditor;

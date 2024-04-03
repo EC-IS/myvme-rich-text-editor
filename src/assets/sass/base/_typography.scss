@@ -1,0 +1,8 @@
+@use "../abstracts/index" as *;
+
+body {
+	font-family: $ff-primary;
+	font-size: map-get($fs, fs-body-m);
+	font-weight: $fw-regular;
+	line-height: 1.6;
+}

@@ -1,0 +1,33 @@
+@use "variables" as *;
+
+@mixin breakpoint-above($breakpoint) {
+	@if not map-has-key($breakpoints, $breakpoint) {
+		@warn "Warning: `#{$breakpoint}` is not a valid breakpoint name.";
+	} @else {
+		@media (min-width: map-get($breakpoints, $breakpoint)) {
+			@content;
+		}
+	}
+}
+
+@mixin breakpoint-below($breakpoint) {
+	@if not map-has-key($breakpoints, $breakpoint) {
+		@warn "Warning: `#{$breakpoint}` is not a valid breakpoint name.";
+	} @else {
+		@media (max-width: calc(map-get($breakpoints, $breakpoint) - $pxEm)) {
+			@content;
+		}
+	}
+}
+
+@mixin breakpoint-between($breakpointMin, $breakpointMax) {
+	@if not map-has-key($breakpoints, $breakpointMin) {
+		@warn "Warning: `#{$breakpointMin}` is not a valid breakpoint name.";
+	} @else if not map-has-key($breakpoints, $breakpointMax) {
+		@warn "Warning: `#{$breakpointMax}` is not a valid breakpoint name.";
+	} @else {
+		@media (min-width: map-get($breakpoints, $breakpointMin)) and (max-width: calc(map-get($breakpoints, $breakpointMax) - $pxEm)) {
+			@content;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+@use "../abstracts/index" as *;
+
+.tooltip {
+  display: inline-block;
+  width: max-content;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+
+  &__text {
+    padding: pxToRem(4) pxToRem(8);
+
+    background-color: $clr-neutral-600;
+
+    border-radius: $border-radius-xs;
+
+    font-size: map-get($fs, fs-body-s);
+    font-weight: $fw-regular;
+    color: $clr-neutral-100;
+  }
+}

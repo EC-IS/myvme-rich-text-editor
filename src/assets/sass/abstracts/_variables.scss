@@ -1,0 +1,60 @@
+@use "functions" as *;
+
+/* --- Colors --- */
+
+$clr-primary-300: hsla(216, 58%, 65%, 1); // #729BD9
+$clr-primary-500: hsla(216, 58%, 45%, 1); // #3166B6
+
+$clr-neutral-100: hsla(0, 0%, 100%, 1); // #FFFFFF
+$clr-neutral-200: hsla(240, 16%, 96%, 1); // #F4F4F7
+$clr-neutral-400: hsla(210, 11%, 60%, 1); // #8E99A4
+$clr-neutral-600: hsla(210, 21%, 30%, 1); // #3C4D5D
+
+$text-25: toHsla($clr-neutral-400, 0.25);
+
+
+/* --- Typography --- */
+
+$ff-primary:
+	#{"Open Sans",
+  sans-serif};
+$ff-secondary:
+	#{"Montserrat",
+  sans-serif};
+
+$fw-regular: 400;
+$fw-bold: 700;
+
+$fs: (
+	fs-heading-xl: #{pxToRem(28)},
+	fs-heading-m: #{pxToRem(18)},
+	fs-heading-xs: #{pxToRem(12)},
+	fs-body-l: #{pxToRem(16)},
+	fs-body-m: #{pxToRem(14)},
+	fs-body-s: #{pxToRem(12)},
+	fs-header: #{pxToRem(14)},
+	fs-btn: #{pxToRem(16)},
+);
+
+
+/* --- Responsive --- */
+
+$breakpoints: (
+	tablet: #{pxToEm(768)},
+	laptop: #{pxToEm(1024)},
+	desktop: #{pxToEm(1200)},
+	desktop-l: #{pxToEm(1440)},
+);
+
+$pxEm: #{pxToEm(1)};
+
+
+/* --- Other --- */
+
+$border: 1px solid $text-25;
+
+$border-radius-xs: #{pxToRem(4)};
+$border-radius-s: #{pxToRem(8)};
+$border-radius-l: #{pxToRem(32)};
+
+$box-shadow-1: 0 0 8px 0 $text-25;

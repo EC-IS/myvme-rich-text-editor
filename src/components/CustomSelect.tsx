@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import IconArrowDown from "../assets/icons/icon-arrow-down.svg?react";
 
@@ -15,6 +15,8 @@ const CustomSelect = ({
   buttonText?: string;
   type: string;
 }) => {
+  const customSelectRef = useRef<any>();
+
   const [isToggled, setIsToggled] = useState(false);
   const toggleDropdown = () => setIsToggled(!isToggled);
 
@@ -25,8 +27,25 @@ const CustomSelect = ({
     return setSelectedValue(e.target.value);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event: any) => {
+      if (
+        customSelectRef.current &&
+        !customSelectRef.current.contains(event.target)
+      ) {
+        setIsToggled(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="custom-select">
+    <div className="custom-select" ref={customSelectRef}>
       <button
         type="submit"
         className="custom-select__btn | btn"

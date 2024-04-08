@@ -1,12 +1,13 @@
 import IconAlignCenter from "../../assets/icons/icon-align-center.svg?react";
 import Tooltip from "../Tooltip.tsx";
 
-const AlignCenter = () => {
+const AlignCenter = ({handleCommand}: ToolbarProps) => {
   return (
     <button
       type="submit"
       className="btn btn--icon"
       aria-label="Text align center"
+      onClick={() => handleCommand('justifyCenter')}
     >
       <IconAlignCenter />
 

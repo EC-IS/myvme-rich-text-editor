@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import CustomSelect from "../CustomSelect.tsx";
 
-const Tags = () => {
+const Tags = ({handleCommand}: ToolbarProps) => {
   const tagsList = [
     "Building name",
     "Building address",
@@ -11,6 +11,11 @@ const Tags = () => {
   ];
 
   const [selectedValue, setSelectedValue] = useState(tagsList[0]);
+
+  useEffect(() => {
+    handleCommand('');    
+  }, [selectedValue]);
+
 
   return (
     <CustomSelect

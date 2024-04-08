@@ -1,0 +1,10 @@
+@use "../abstracts/index" as *;
+
+.editor { 
+  &:hover,
+  &:focus {
+    border: pxToRem(2) solid $clr-primary-500;
+    border-radius: $border-radius-s;
+    outline: transparent;
+  }
+}

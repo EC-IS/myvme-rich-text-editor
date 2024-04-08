@@ -1,12 +1,13 @@
 import IconAlignLeft from "../../assets/icons/icon-align-left.svg?react";
 import Tooltip from "../Tooltip.tsx";
 
-const AlignLeft = () => {
+const AlignLeft = ( {handleCommand}: ToolbarProps) => {
   return (
     <button
       type="submit"
       className="btn btn--icon"
       aria-label="Text align left"
+      onClick={() => handleCommand('justifyLeft')}
     >
       <IconAlignLeft />
 

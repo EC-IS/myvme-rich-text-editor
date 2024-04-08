@@ -12,35 +12,47 @@ import Tags from "./toolbar-items/Tags.tsx";
 import FontColor from "./toolbar-items/FontColor.tsx";
 import TextMarker from "./toolbar-items/TextMarker.tsx";
 
-const Toolbar = () => {
+
+
+
+
+const Toolbar = ({ handleCommand } : ToolbarProps) => {
+  // Function to add a link
+  
+
+  // Function to insert an image
+  // const insertImage = () => {
+  //   const imageUrl = prompt("Enter the image URL");
+  //   if (imageUrl) handleCommand("insertImage", imageUrl);
+  // };
   return (
     <div className="rich-text-editor__toolbar">
       <div>
-        <FontSize />
+        <FontSize handleCommand={handleCommand}/>
       </div>
       <div>
-        <Bold />
-        <Italic />
-        <Underline />
+        <Bold handleCommand={handleCommand} />
+        <Italic handleCommand={handleCommand} />
+        <Underline handleCommand={handleCommand} />
       </div>
       <div>
-        <FontColor />
-        <TextMarker />
+        <FontColor handleCommand={handleCommand} />
+        <TextMarker handleCommand={handleCommand} />
       </div>
       <div>
-        <UnorderedList />
-        <OrderedList />
+        <UnorderedList handleCommand={handleCommand} />
+        <OrderedList handleCommand={handleCommand} />
       </div>
       <div>
-        <AlignLeft />
-        <AlignCenter />
-        <AlignRight />
+        <AlignLeft handleCommand={handleCommand} />
+        <AlignCenter handleCommand={handleCommand} />
+        <AlignRight handleCommand={handleCommand} />
+      </div>
+      <div >
+        <Link handleCommand={handleCommand} />
       </div>
       <div>
-        <Link />
-      </div>
-      <div>
-        <Tags />
+        <Tags handleCommand={handleCommand}/>
       </div>
     </div>
   );

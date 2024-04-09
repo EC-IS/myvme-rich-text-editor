@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import Toolbar from "./Toolbar";
 
-import "../assets/sass/main.scss";
+import styles from "./MyVMERichTextEditor.module.scss";
 
 const MyVMERichTextEditor = () => {
   const editorRef = useRef<HTMLDivElement>(null);
@@ -29,14 +29,14 @@ const MyVMERichTextEditor = () => {
   // };
 
   return (
-    <div>
-      <div className={`toolbar ${isFocused ? "visible" : ""}`}>
+    <div className={styles.MyVMERichTextEditor}>
+      <div className={`${styles.toolbar} ${isFocused ? styles.visible : ''}`}>
         <Toolbar handleCommand={handleCommand} />
       </div>
       <div
         ref={editorRef}
         contentEditable
-        className="editor"
+        className={styles.editor}
         onInput={handleInput}
         onFocus={handleFocus}
         onBlur={handleBlur}

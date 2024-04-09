@@ -1,11 +1,16 @@
 import IconUnderline from "../../assets/icons/icon-underline.svg?react";
 import Tooltip from "../Tooltip.tsx";
+import styles from './Button.module.scss';
 
-const Underline = ({handleCommand}: ToolbarProps) => {
+const Underline = ({ handleCommand }: ToolbarProps) => {
   return (
-    <button type="submit" className="btn btn--icon" aria-label="Underline" onClick={() => handleCommand('underline')}>
+    <button
+      type="button"
+      className={`${styles.btn} ${styles['btn--icon']}`}
+      aria-label="Underline"
+      onClick={() => handleCommand('underline')}
+    >
       <IconUnderline />
-
       <Tooltip text="Underline" />
     </button>
   );

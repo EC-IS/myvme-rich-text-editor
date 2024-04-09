@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from "react";
-
 import IconArrowDown from "../assets/icons/icon-arrow-down.svg?react";
+import styles from './CustomSelect.module.scss';
+import buttonStyles from './toolbar-items/Button.module.scss';
 
 const CustomSelect = ({
   listItems,
   selectedValue,
   setSelectedValue,
   buttonText,
-  type, // used for the radio buttons name, so they can be grouped
+  type,
 }: {
   listItems: any[];
   selectedValue: any;
@@ -22,34 +23,27 @@ const CustomSelect = ({
 
   const handleChange = (e: any) => {
     e.preventDefault();
-
     toggleDropdown();
-    return setSelectedValue(e.target.value);
+    setSelectedValue(e.target.value);
   };
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      // Asserting event.target as Node
       const target = event.target as Node;
-  
       if (customSelectRef.current && !customSelectRef.current.contains(target)) {
         setIsToggled(false);
       }
     };
   
     document.addEventListener("click", handleClickOutside);
-  
-    // Cleanup function to remove event listener
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
+    return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
   return (
-    <div className="custom-select" ref={customSelectRef}>
+    <div className={styles['custom-select']} ref={customSelectRef}>
       <button
-        type="submit"
-        className="custom-select__btn | btn"
+        type="button"
+        className={`${styles['custom-select__btn']} ${buttonStyles.btn}`}
         aria-expanded={isToggled}
         aria-controls={`custom-select-list-${type}`}
         aria-label="toggle dropdown"
@@ -59,17 +53,14 @@ const CustomSelect = ({
       </button>
       <ul
         id={`custom-select-list-${type}`}
-        className={`custom-select__list ${isToggled ? "open" : ""}`}
+        className={`${styles['custom-select__list']} ${isToggled ? styles.open : ""}`}
       >
         {listItems.map((item: string, index: number) => (
           <li
             key={index}
-            className={`custom-select__item ${item === selectedValue ? "selected" : ""}`}
+            className={`${styles['custom-select__item']} ${item === selectedValue ? styles.selected : ""}`}
           >
-            <label
-              htmlFor={`custom-select-${type}-radio-${index}`}
-              className=""
-            >
+            <label htmlFor={`custom-select-${type}-radio-${index}`}>
               <input
                 type="radio"
                 id={`custom-select-${type}-radio-${index}`}

@@ -1,0 +1,140 @@
+@use "../../assets/sass/abstracts/index" as *;
+
+.btn {
+  background: none;
+  border: none;
+  outline: transparent;
+  text-decoration: none;
+
+  display: inline-flex;
+  align-items: center;
+  gap: pxToRem(8);
+
+  width: fit-content;
+  padding: pxToRem(4) pxToRem(6);
+
+  border-radius: $border-radius-xs;
+
+  font-size: map-get($fs, fs-body-m);
+  line-height: 1;
+
+  transition: all 300ms ease-in-out;
+
+  cursor: pointer;
+}
+
+.btn--icon {
+  justify-content: center;
+
+  width: pxToRem(24);
+  height: pxToRem(24);
+
+  &.selected,
+  &:hover,
+  &:focus-visible {
+    background-color: toHsla($clr-primary-500, 0.1);
+
+    svg {
+      path {
+        fill: $clr-primary-500;
+      }
+    }
+  }
+
+  // &:has(.tooltip) {
+  position: relative;
+
+  .tooltip {
+    display: none;
+  }
+
+  &.btn--icon:hover {
+    .tooltip {
+      display: inline-block;
+    }
+  }
+  // }
+}
+
+.btn--color {
+  position: relative;
+
+  &:first-of-type {
+    margin-right: pxToRem(6);
+  }
+
+  //   &:has(.tooltip) {
+  position: relative;
+
+  .tooltip {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.btn--color:hover {
+    .tooltip {
+      display: inline-block;
+    }
+  }
+  //   }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: pxToRem(0);
+
+    position: relative;
+    bottom: pxToRem(-3);
+  }
+
+  label {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 0 pxToRem(4);
+
+    cursor: pointer;
+
+    > input {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+
+    > svg:first-of-type {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      justify-self: center;
+    }
+
+    > svg:last-of-type {
+      grid-row: span 2;
+      justify-self: center;
+      align-self: center;
+    }
+  }
+
+  input[type="color"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 12px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+
+    &::-webkit-color-swatch {
+      border-radius: $border-radius-xs;
+      border: none;
+      padding: 0;
+    }
+    &::-moz-color-swatch {
+      border-radius: $border-radius-xs;
+      border: none;
+    }
+  }
+}

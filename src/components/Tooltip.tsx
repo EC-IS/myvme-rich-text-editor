@@ -1,7 +1,9 @@
+import styles from "./Tooltip.module.scss";
+
 const Tooltip = ({ text }: { text: string }) => {
   return (
-    <div className="tooltip">
-      <span className="tooltip__text">{text}</span>
+    <div className={styles.tooltip}>
+      <span className={styles['tooltip__text']}>{text}</span>
     </div>
   );
 };

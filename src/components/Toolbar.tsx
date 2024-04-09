@@ -12,7 +12,7 @@ import Tags from "./toolbar-items/Tags.tsx";
 import FontColor from "./toolbar-items/FontColor.tsx";
 import TextMarker from "./toolbar-items/TextMarker.tsx";
 
-
+import styles from "./Toolbar.module.scss";
 
 
 
@@ -26,7 +26,7 @@ const Toolbar = ({ handleCommand } : ToolbarProps) => {
   //   if (imageUrl) handleCommand("insertImage", imageUrl);
   // };
   return (
-    <div className="rich-text-editor__toolbar">
+    <div className={styles['rich-text-editor__toolbar']}>
       <div>
         <FontSize handleCommand={handleCommand}/>
       </div>

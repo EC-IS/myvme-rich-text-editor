@@ -15,7 +15,7 @@ const CustomSelect = ({
   buttonText?: string;
   type: string;
 }) => {
-  const customSelectRef = useRef<any>();
+  const customSelectRef = useRef<HTMLDivElement>();
 
   const [isToggled, setIsToggled] = useState(false);
   const toggleDropdown = () => setIsToggled(!isToggled);
@@ -28,7 +28,7 @@ const CustomSelect = ({
   };
 
   useEffect(() => {
-    const handleClickOutside = (event: any) => {
+    const handleClickOutside = (event: MouseEvent) => {
       if (
         customSelectRef.current &&
         !customSelectRef.current.contains(event.target)

@@ -15,7 +15,7 @@ const CustomSelect = ({
   buttonText?: string;
   type: string;
 }) => {
-  const customSelectRef = useRef<HTMLDivElement>();
+  const customSelectRef = useRef<HTMLDivElement | null>(null);
 
   const [isToggled, setIsToggled] = useState(false);
   const toggleDropdown = () => setIsToggled(!isToggled);
@@ -29,16 +29,17 @@ const CustomSelect = ({
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (
-        customSelectRef.current &&
-        !customSelectRef.current.contains(event.target)
-      ) {
+      // Asserting event.target as Node
+      const target = event.target as Node;
+  
+      if (customSelectRef.current && !customSelectRef.current.contains(target)) {
         setIsToggled(false);
       }
     };
-
+  
     document.addEventListener("click", handleClickOutside);
-
+  
+    // Cleanup function to remove event listener
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };

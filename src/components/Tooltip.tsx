@@ -1,4 +1,4 @@
-import styles from "./Tooltip.module.scss";
+import styles from "./toolbar-items/Button.module.scss";
 
 const Tooltip = ({ text }: { text: string }) => {
   return (

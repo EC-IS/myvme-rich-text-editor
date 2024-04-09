@@ -14,7 +14,7 @@ const TextMarker = ({ handleCommand }: ToolbarProps) => {
   }
 
   return (
-    <div className={styles['btn--color']}>
+    <div className={`${styles.btn} ${styles['btn--color']}`}>
       <div>
         <label htmlFor="text-marker">
           <input id="text-marker" type="color" value={color} onChange={handleColorChange}/>

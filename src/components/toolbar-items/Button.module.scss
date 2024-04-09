@@ -21,6 +21,31 @@
   transition: all 300ms ease-in-out;
 
   cursor: pointer;
+
+  .tooltip {
+    // display: inline-block;
+    display: none;
+    width: max-content;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+  
+    &__text {
+      padding: pxToRem(4) pxToRem(8);
+  
+      background-color: $clr-neutral-600;
+  
+      border-radius: $border-radius-xs;
+  
+      font-size: map-get($fs, fs-body-s);
+      font-weight: $fw-regular;
+      color: $clr-neutral-100;
+    }
+  }
+
+  &:hover .tooltip {
+    display: inline-block;
+  }
+
 }
 
 .btn--icon {
@@ -41,18 +66,14 @@
     }
   }
 
-  // &:has(.tooltip) {
   position: relative;
-
-  .tooltip {
-    display: none;
-  }
-
-  &.btn--icon:hover {
-    .tooltip {
-      display: inline-block;
-    }
-  }
+  
+  // &:hover {
+  //   .tooltip {
+  //     display: inline-block;
+  //   }
+  // }
+  
   // }
 }
 
@@ -63,24 +84,13 @@
     margin-right: pxToRem(6);
   }
 
-  //   &:has(.tooltip) {
-  position: relative;
-
-  .tooltip {
-    display: none;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  &.btn--color:hover {
-    .tooltip {
-      display: inline-block;
-    }
-  }
+  // &.btn--color:hover {
+  //   .tooltip {
+  //     display: inline-block;
   //   }
+  // }
 
-  > div {
+  > div:first-of-type {
     display: flex;
     flex-direction: column;
     align-items: center;

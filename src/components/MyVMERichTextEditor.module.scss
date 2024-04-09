@@ -1,30 +1,25 @@
 @use "../assets/sass/abstracts/index" as *;
 
 .MyVMERichTextEditor {
-  // .toolbar {
-  //   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-  //   opacity: 0;
-  //   transform: translateY(20px);
-  //   pointer-events: none;
-  // }
+  .toolbar {
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+  }
 
-  // .toolbar.visible {
-  //   opacity: 1;
-  //   transform: translateY(0);
-  //   pointer-events: auto;
-  // }
+  .toolbar.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: $ff-primary;
   font-size: map-get($fs, fs-body-m);
   font-weight: $fw-regular;
   line-height: 1.6;
-  body {
-    // font-family: $ff-primary;
-    // font-size: map-get($fs, fs-body-m);
-    // font-weight: $fw-regular;
-    // line-height: 1.6;
-  }
+
   .editor {
     &:hover,
     &:focus {
@@ -51,10 +46,6 @@
     height: 100%;
   }
 
-  body {
-    // line-height: 1.5;
-    // -webkit-font-smoothing: antialiased;
-  }
   p,
   h1,
   h2,

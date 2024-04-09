@@ -15,7 +15,7 @@ const FontColor = ({handleCommand}: ToolbarProps) => {
   }
 
   return (
-    <div className={styles['btn--color']}>
+    <div className={`${styles.btn} ${styles['btn--color']}`}>
       <div>
         <label htmlFor="font-color">
           <input id="font-color" type="color" value={color} onChange={handleColorChange}/>

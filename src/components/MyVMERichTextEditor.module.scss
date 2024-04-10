@@ -26,7 +26,8 @@
   .editor {
     &:hover,
     &:focus {
-      border: pxToRem(2) solid $clr-primary-500;
+      //border: pxToRem(2) solid $clr-primary-500;
+      border: 2px solid transparent;
       border-radius: $border-radius-s;
       outline: transparent;
     }

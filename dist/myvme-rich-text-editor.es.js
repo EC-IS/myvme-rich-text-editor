@@ -906,7 +906,7 @@ const b3 = (r) => /* @__PURE__ */ v.createElement("svg", { width: 9, height: 12,
   ] }),
   /* @__PURE__ */ n.jsx("div", { children: /* @__PURE__ */ n.jsx(Z3, { handleCommand: r }) }),
   /* @__PURE__ */ n.jsx("div", { children: /* @__PURE__ */ n.jsx(U3, { handleCommand: r }) })
-] }), K3 = "_MyVMERichTextEditor_1yut6_5", X3 = "_toolbar_1yut6_14", Q3 = "_visible_1yut6_20", e6 = "_editor_1yut6_25", q = {
+] }), K3 = "_MyVMERichTextEditor_c0y7c_5", X3 = "_toolbar_c0y7c_14", Q3 = "_visible_c0y7c_20", e6 = "_editor_c0y7c_25", q = {
   MyVMERichTextEditor: K3,
   toolbar: X3,
   visible: Q3,

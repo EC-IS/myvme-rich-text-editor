@@ -1,24 +1,28 @@
 @use "../assets/sass/abstracts/index" as *;
 
 .rich-text-editor__toolbar {
+  position: absolute;
+  bottom: calc(100% + 0.5rem);
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  gap: pxToRem(12);
+
+  width: fit-content;
+  padding: pxToRem(6) pxToRem(16);
+
+  border-radius: $border-radius-s;
+  box-shadow: $box-shadow-1;
+
+  > div {
     display: flex;
     align-items: center;
-    gap: pxToRem(12);
+    gap: pxToRem(4);
 
-    width: fit-content;
-    padding: pxToRem(6) pxToRem(16);
-
-    border-radius: $border-radius-s;
-    box-shadow: $box-shadow-1;
-
-    > div {
-      display: flex;
-      align-items: center;
-      gap: pxToRem(4);
-
-      &:not(:last-of-type) {
-        border-right: $border;
-        padding-right: pxToRem(12);
-      }
+    &:not(:last-of-type) {
+      border-right: $border;
+      padding-right: pxToRem(12);
     }
   }
+}

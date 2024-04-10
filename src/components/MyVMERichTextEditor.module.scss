@@ -2,6 +2,7 @@
 
 .MyVMERichTextEditor {
   position: relative;
+  z-index: 1000;
 
   .toolbar {
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;

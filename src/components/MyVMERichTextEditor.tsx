@@ -3,7 +3,7 @@ import Toolbar from "./Toolbar";
 
 import styles from "./MyVMERichTextEditor.module.scss";
 
-const MyVMERichTextEditor = ({ editorRef, editorContainerRef }: MyVMERichTextEditorProps) => {
+const MyVMERichTextEditor = ({ editorRef, editorContainerRef, defaultValue = '' }: MyVMERichTextEditorProps) => {
   
   const [isFocused, setIsFocused] = useState(false);
 
@@ -11,6 +11,9 @@ const MyVMERichTextEditor = ({ editorRef, editorContainerRef }: MyVMERichTextEdi
     // if(editorRef.current){
     //   editorRef.current.focus();
     // }
+    if (editorRef.current && defaultValue) {
+      editorRef.current.innerHTML = defaultValue;
+    }
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -18,6 +21,7 @@ const MyVMERichTextEditor = ({ editorRef, editorContainerRef }: MyVMERichTextEdi
   }, []);
 
   const handleInput = () => {
+    console.log(editorRef)
     console.log("Input detected:", editorRef.current?.innerHTML);
   };
 

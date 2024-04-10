@@ -627,13 +627,13 @@ Check the top-level render call using <` + o + ">.");
 }
 process.env.NODE_ENV === "production" ? o1.exports = p3() : o1.exports = x3();
 var n = o1.exports;
-const b3 = (r) => /* @__PURE__ */ v.createElement("svg", { width: 9, height: 12, viewBox: "0 0 9 12", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...r }, /* @__PURE__ */ v.createElement("path", { d: "M1.73077 12C1.25481 12 0.847356 11.8321 0.508413 11.4964C0.169471 11.1607 0 10.7571 0 10.2857V1.71429C0 1.24286 0.169471 0.839286 0.508413 0.503571C0.847356 0.167857 1.25481 0 1.73077 0H4.78125C5.71875 0 6.58413 0.285714 7.3774 0.857143C8.17067 1.42857 8.56731 2.22143 8.56731 3.23571C8.56731 3.96429 8.40144 4.525 8.06971 4.91786C7.73798 5.31071 7.42788 5.59286 7.13942 5.76429C7.5 5.92143 7.90024 6.21429 8.34014 6.64286C8.78005 7.07143 9 7.71429 9 8.57143C9 9.84286 8.53125 10.7321 7.59375 11.2393C6.65625 11.7464 5.77644 12 4.95433 12H1.73077ZM2.61779 9.6H4.86779C5.5601 9.6 5.98197 9.425 6.13341 9.075C6.28486 8.725 6.36058 8.47143 6.36058 8.31429C6.36058 8.15714 6.28486 7.90357 6.13341 7.55357C5.98197 7.20357 5.53846 7.02857 4.80288 7.02857H2.61779V9.6ZM2.61779 4.71429H4.62981C5.10577 4.71429 5.45192 4.59286 5.66827 4.35C5.88462 4.10714 5.99279 3.83571 5.99279 3.53571C5.99279 3.19286 5.87019 2.91429 5.625 2.7C5.37981 2.48571 5.0625 2.37857 4.67308 2.37857H2.61779V4.71429Z", fill: "#8E99A4" })), _3 = "_btn_9i5v5_5", m3 = "_tooltip_9i5v5_21", E3 = "_tooltip__text_9i5v5_27", w3 = "_selected_9i5v5_45", f = {
+const b3 = (r) => /* @__PURE__ */ v.createElement("svg", { width: 9, height: 12, viewBox: "0 0 9 12", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...r }, /* @__PURE__ */ v.createElement("path", { d: "M1.73077 12C1.25481 12 0.847356 11.8321 0.508413 11.4964C0.169471 11.1607 0 10.7571 0 10.2857V1.71429C0 1.24286 0.169471 0.839286 0.508413 0.503571C0.847356 0.167857 1.25481 0 1.73077 0H4.78125C5.71875 0 6.58413 0.285714 7.3774 0.857143C8.17067 1.42857 8.56731 2.22143 8.56731 3.23571C8.56731 3.96429 8.40144 4.525 8.06971 4.91786C7.73798 5.31071 7.42788 5.59286 7.13942 5.76429C7.5 5.92143 7.90024 6.21429 8.34014 6.64286C8.78005 7.07143 9 7.71429 9 8.57143C9 9.84286 8.53125 10.7321 7.59375 11.2393C6.65625 11.7464 5.77644 12 4.95433 12H1.73077ZM2.61779 9.6H4.86779C5.5601 9.6 5.98197 9.425 6.13341 9.075C6.28486 8.725 6.36058 8.47143 6.36058 8.31429C6.36058 8.15714 6.28486 7.90357 6.13341 7.55357C5.98197 7.20357 5.53846 7.02857 4.80288 7.02857H2.61779V9.6ZM2.61779 4.71429H4.62981C5.10577 4.71429 5.45192 4.59286 5.66827 4.35C5.88462 4.10714 5.99279 3.83571 5.99279 3.53571C5.99279 3.19286 5.87019 2.91429 5.625 2.7C5.37981 2.48571 5.0625 2.37857 4.67308 2.37857H2.61779V4.71429Z", fill: "#8E99A4" })), _3 = "_btn_4vry3_5", m3 = "_tooltip_4vry3_21", E3 = "_tooltip__text_4vry3_27", w3 = "_selected_4vry3_45", f = {
   btn: _3,
   tooltip: m3,
   tooltip__text: E3,
-  "btn--icon": "_btn--icon_9i5v5_39",
+  "btn--icon": "_btn--icon_4vry3_39",
   selected: w3,
-  "btn--color": "_btn--color_9i5v5_52"
+  "btn--color": "_btn--color_4vry3_52"
 }, H = ({ text: r }) => /* @__PURE__ */ n.jsx("div", { className: f.tooltip, children: /* @__PURE__ */ n.jsx("span", { className: f.tooltip__text, children: r }) }), y3 = ({ handleCommand: r }) => /* @__PURE__ */ n.jsxs(
   "button",
   {
@@ -883,7 +883,7 @@ const b3 = (r) => /* @__PURE__ */ v.createElement("svg", { width: 9, height: 12,
     /* @__PURE__ */ n.jsx(H, { text: "Text marker color" })
   ] });
 }, J3 = {
-  "rich-text-editor__toolbar": "_rich-text-editor__toolbar_iz2v2_5"
+  "rich-text-editor__toolbar": "_rich-text-editor__toolbar_ez8l1_5"
 }, G3 = ({ handleCommand: r }) => /* @__PURE__ */ n.jsxs("div", { className: J3["rich-text-editor__toolbar"], children: [
   /* @__PURE__ */ n.jsx("div", { children: /* @__PURE__ */ n.jsx(B3, { handleCommand: r }) }),
   /* @__PURE__ */ n.jsxs("div", { children: [
@@ -906,7 +906,7 @@ const b3 = (r) => /* @__PURE__ */ v.createElement("svg", { width: 9, height: 12,
   ] }),
   /* @__PURE__ */ n.jsx("div", { children: /* @__PURE__ */ n.jsx(Z3, { handleCommand: r }) }),
   /* @__PURE__ */ n.jsx("div", { children: /* @__PURE__ */ n.jsx(U3, { handleCommand: r }) })
-] }), K3 = "_MyVMERichTextEditor_37g9y_5", X3 = "_toolbar_37g9y_13", Q3 = "_visible_37g9y_19", e6 = "_editor_37g9y_24", q = {
+] }), K3 = "_MyVMERichTextEditor_1yut6_5", X3 = "_toolbar_1yut6_14", Q3 = "_visible_1yut6_20", e6 = "_editor_1yut6_25", q = {
   MyVMERichTextEditor: K3,
   toolbar: X3,
   visible: Q3,

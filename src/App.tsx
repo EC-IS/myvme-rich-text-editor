@@ -12,11 +12,6 @@ const App = () => {
         editorRef={editorRef}
         editorContainerRef={editorContainerRef}
       />
-      {/* <div
-        style={{ display: "grid", placeContent: "center", marginTop: "4rem" }}
-      >
-        <Toolbar />
-      </div> */}
     </div>
   );
 };

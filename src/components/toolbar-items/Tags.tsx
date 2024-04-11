@@ -14,7 +14,7 @@ const Tags = ({handleCommand}: ToolbarProps) => {
 
   useEffect(() => {
     handleCommand('');    
-  }, [selectedValue]);
+  }, []);
 
 
   return (

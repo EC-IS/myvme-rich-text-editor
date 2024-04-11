@@ -7,7 +7,6 @@ interface ToolbarProps {
 }
 
 interface MyVMERichTextEditorProps {
-  editorRef: React.RefObject<HTMLDivElement>;
-  editorContainerRef: React.RefObject<HTMLDivElement>;
   defaultValue?: string;
+  onValueChange: (value: string) => void; 
 }

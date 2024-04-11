@@ -8,7 +8,7 @@ import AlignCenter from "./toolbar-items/AlignCenter.tsx";
 import AlignRight from "./toolbar-items/AlignRight.tsx";
 import Link from "./toolbar-items/Link.tsx";
 import FontSize from "./toolbar-items/FontSize.tsx";
-import Tags from "./toolbar-items/Tags.tsx";
+// import Tags from "./toolbar-items/Tags.tsx";
 import FontColor from "./toolbar-items/FontColor.tsx";
 import TextMarker from "./toolbar-items/TextMarker.tsx";
 
@@ -52,7 +52,7 @@ const Toolbar = ({ handleCommand } : ToolbarProps) => {
         <Link handleCommand={handleCommand} />
       </div>
       <div>
-        <Tags handleCommand={handleCommand}/>
+        {/* <Tags handleCommand={handleCommand}/> */}
       </div>
     </div>
   );

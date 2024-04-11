@@ -1,2 +1,2 @@
-declare const MyVMERichTextEditor: ({ editorRef, editorContainerRef, defaultValue }: MyVMERichTextEditorProps) => import("react/jsx-runtime").JSX.Element;
+declare const MyVMERichTextEditor: ({ defaultValue, onValueChange }: MyVMERichTextEditorProps) => import("react/jsx-runtime").JSX.Element;
 export default MyVMERichTextEditor;

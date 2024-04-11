@@ -15,7 +15,8 @@ const FontSize = ({ handleCommand }: ToolbarProps) => {
         handleCommand('formatBlock', '<h2>');
         break;
       default:
-        handleCommand('formatBlock', '<p>');
+        break;
+        // handleCommand('formatBlock', '<p>');
     }
   }, [selectedValue, handleCommand]);
 

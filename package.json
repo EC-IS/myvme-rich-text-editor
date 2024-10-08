@@ -1,6 +1,5 @@
 {
-  "name": "myvme-rich-text-editor",
-  "private": true,
+  "name": "@myvme/myvme-rich-text-editor",
   "version": "1.0.0",
   "type": "module",
   "main": "dist/myvme-rich-text-editor.umd.js",
@@ -13,6 +12,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@myvme/myvme-rich-text-editor": "file:",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "vite-plugin-dts": "^3.8.1"
@@ -32,7 +32,7 @@
     "vite": "^5.2.0",
     "vite-plugin-svgr": "^4.2.0"
   },
-  "author": {
-    "name": "Thomas Spleesters"
-  }
+  "author": "Thomas Spleesters",
+  "description": "MyVME Rich Text Editor",
+  "license": "ISC"
 }
